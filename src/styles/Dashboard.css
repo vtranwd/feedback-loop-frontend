@@ -1,0 +1,154 @@
+.dashboard-container {
+  min-height: 100vh;
+  background: #f7f9fc;
+}
+
+.dashboard-header {
+  background: white;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  color: #333;
+}
+
+.dashboard-header button {
+  padding: 0.5rem 1rem;
+  background: #e53e3e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.dashboard-header button:hover {
+  background: #c53030;
+}
+
+.dashboard-main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.feedback-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.feedback-form h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.feedback-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.feedback-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.feedback-form select {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.feedback-form button {
+  padding: 0.75rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.feedback-form button:hover:not(:disabled) {
+  background: #5568d3;
+}
+
+.feedback-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.feedback-list {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.feedback-list h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.feedback-count {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.feedback-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feedback-item {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feedback-item:last-child {
+  border-bottom: none;
+}
+
+.feedback-text {
+  flex: 1;
+  color: #333;
+  margin-right: 1rem;
+}
+
+.feedback-meta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.source {
+  background: #f0f4ff;
+  color: #667eea;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+}
+
+.error {
+  color: #e53e3e;
+  padding: 1rem;
+  background: #fff5f5;
+  border-radius: 4px;
+}
