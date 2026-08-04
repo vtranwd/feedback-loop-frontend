@@ -91,6 +91,7 @@ export default function Dashboard() {
       <header className="dashboard-header">
         <h1>Feedback Loop</h1>
         <button onClick={handleLogout}>Logout</button>
+        <a href="/environmental" className="nav-link">🌱 Environmental Hub</a>
       </header>
 
       <main className="dashboard-main">

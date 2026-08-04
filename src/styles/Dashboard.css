@@ -152,3 +152,19 @@
   background: #fff5f5;
   border-radius: 4px;
 }
+
+.nav-link {
+  padding: 0.5rem 1rem;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.nav-link:hover {
+  background: #5568d3;
+}

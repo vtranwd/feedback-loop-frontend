@@ -1,0 +1,271 @@
+.env-dashboard-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.env-dashboard-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.env-dashboard-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.env-dashboard-header button {
+  padding: 0.5rem 1rem;
+  background: #e53e3e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.env-dashboard-header button:hover {
+  background: #c53030;
+}
+
+.env-dashboard-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Alerts Section */
+.alerts-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.alerts-section h2 {
+  margin-top: 0;
+  color: #d32f2f;
+}
+
+.alerts-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.alert-item {
+  padding: 1rem;
+  border-radius: 4px;
+  border-left: 4px solid;
+}
+
+.alert-low {
+  background: #fff3cd;
+  border-color: #ffc107;
+}
+
+.alert-medium {
+  background: #ffe0b2;
+  border-color: #ff9800;
+}
+
+.alert-high {
+  background: #ffcccc;
+  border-color: #f44336;
+}
+
+.alert-critical {
+  background: #ff8a80;
+  border-color: #d32f2f;
+  color: white;
+}
+
+.alert-type {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.alert-description {
+  margin-bottom: 0.5rem;
+}
+
+.alert-time {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* Projects Section */
+.projects-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.projects-section h2 {
+  margin-top: 0;
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  padding: 1.5rem;
+  background: #f5f5f5;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.project-card:hover {
+  border-color: #667eea;
+  background: #f0f4ff;
+  transform: translateY(-2px);
+}
+
+.project-card.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.project-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-type {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin-bottom: 0.5rem;
+}
+
+.project-location {
+  font-size: 0.9rem;
+}
+
+/* Project Details */
+.project-details {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.project-details h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.project-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.stat-box {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Chart Sections */
+.chart-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.chart-section h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+/* Observations Section */
+.observations-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.observations-section h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+.observations-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 1rem;
+}
+
+.observation-item {
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #82ca9d;
+}
+
+.obs-type {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+.obs-value {
+  font-size: 1.3rem;
+  color: #667eea;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.obs-location {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.obs-date {
+  font-size: 0.85rem;
+  color: #999;
+  margin-bottom: 0.5rem;
+}
+
+.obs-notes {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #eee;
+}
