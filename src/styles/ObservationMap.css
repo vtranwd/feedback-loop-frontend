@@ -1,0 +1,131 @@
+.observation-map {
+  height: 400px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.map-placeholder {
+  height: 400px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  margin-bottom: 2rem;
+}
+
+.popup-content h4 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.popup-content p {
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+.popup-content strong {
+  color: #667eea;
+}
+
+/* Leaflet map overrides */
+.leaflet-container {
+  font-family: inherit;
+}
+
+.leaflet-popup-content-wrapper {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.leaflet-popup-tip {
+  background: white;
+}
+
+/* Responsive Design */
+
+/* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .observation-map {
+    height: 350px;
+    margin-bottom: 1.5rem;
+  }
+
+  .map-placeholder {
+    height: 350px;
+    padding: 1.5rem;
+  }
+
+  .popup-content {
+    font-size: 0.9rem;
+  }
+
+  .popup-content h4 {
+    font-size: 1rem;
+  }
+
+  .popup-content p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .observation-map {
+    height: 300px;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+  }
+
+  .map-placeholder {
+    height: 300px;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  .popup-content {
+    font-size: 0.85rem;
+  }
+
+  .popup-content h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .popup-content p {
+    margin: 0.2rem 0;
+    font-size: 0.8rem;
+  }
+
+  .popup-content strong {
+    font-size: 0.85rem;
+  }
+
+  .leaflet-popup-content-wrapper {
+    padding: 0.75rem;
+  }
+}
+
+/* Extra small phones (320px and below) */
+@media (max-width: 320px) {
+  .observation-map {
+    height: 250px;
+  }
+
+  .map-placeholder {
+    height: 250px;
+    padding: 0.75rem;
+  }
+
+  .popup-content h4 {
+    font-size: 0.9rem;
+  }
+
+  .popup-content p {
+    font-size: 0.75rem;
+  }
+}

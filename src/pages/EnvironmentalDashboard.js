@@ -15,6 +15,8 @@ import {
   Pie,
   Cell,
 } from 'recharts';
+import AddObservationForm from '../components/AddObservationForm';
+import ObservationMap from '../components/ObservationMap';
 import '../styles/EnvironmentalDashboard.css';
 
 export default function EnvironmentalDashboard() {
@@ -244,7 +246,16 @@ export default function EnvironmentalDashboard() {
                 </div>
               </div>
             </section>
-
+            {/* Add Observation Form */}
+              <AddObservationForm
+                projectId={selectedProject.id}
+                onObservationAdded={() => fetchProjectData(selectedProject.id)}
+              />
+              {/* Observation Map */}
+            <section className="map-section">
+              <h2>📍 Observation Locations</h2>
+              <ObservationMap observations={observations} projectLocation={selectedProject.location} />
+            </section>
             {/* CO2 Sequestration Chart */}
             {co2Data.length > 0 && (
               <section className="chart-section">

@@ -168,3 +168,61 @@
 .nav-link:hover {
   background: #5568d3;
 }
+
+/* Responsive Design */
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  .dashboard-header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .dashboard-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .dashboard-header button,
+  .nav-link {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+
+  .dashboard-main {
+    padding: 1rem;
+  }
+
+  .feedback-form {
+    padding: 1rem;
+  }
+
+  .feedback-form h2 {
+    font-size: 1.1rem;
+  }
+
+  .feedback-form textarea,
+  .feedback-form select {
+    font-size: 0.95rem;
+  }
+
+  .feedback-list {
+    padding: 1rem;
+  }
+
+  .feedback-item {
+    flex-direction: column;
+    padding: 0.75rem;
+  }
+
+  .feedback-text {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .feedback-meta {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
