@@ -43,7 +43,7 @@ export default function EnvironmentalDashboard() {
   const fetchProjects = async () => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:4000/graphql', {
+      const response = await fetch('https://web-production-9f29d.up.railway.app/graphql', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -75,7 +75,7 @@ export default function EnvironmentalDashboard() {
   const fetchProjectData = async (projectId) => {
     try {
       // Fetch observations
-      const obsResponse = await fetch('http://localhost:4000/graphql', {
+      const obsResponse = await fetch('https://web-production-9f29d.up.railway.app/graphql', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -97,7 +97,7 @@ export default function EnvironmentalDashboard() {
       setObservations(obsData.data.observationsByProject);
 
       // Fetch impact metrics
-      const metResponse = await fetch('http://localhost:4000/graphql', {
+      const metResponse = await fetch('https://web-production-9f29d.up.railway.app/graphql', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -121,7 +121,7 @@ export default function EnvironmentalDashboard() {
 
   const fetchAlerts = async () => {
     try {
-      const response = await fetch('http://localhost:4000/graphql', {
+      const response = await fetch('https://web-production-9f29d.up.railway.app/graphql', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
