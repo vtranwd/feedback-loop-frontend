@@ -41,7 +41,7 @@ export default function Dashboard() {
           }`,
         }),
       });
-      const data = await response.json();
+      // const data = await response.json();
       setFeedbackList(data.data.listFeedback.items);
     } catch (error) {
       console.error('Error fetching feedback:', error);
@@ -72,7 +72,7 @@ export default function Dashboard() {
           }`,
         }),
       });
-      // const data = await response.json();
+      const data = await response.json();
       setFeedbackText('');
       fetchFeedback();
     } catch (error) {
