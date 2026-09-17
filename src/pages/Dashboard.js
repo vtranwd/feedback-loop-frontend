@@ -59,7 +59,7 @@ export default function Dashboard() {
 
     setCreating(true);
     try {
-      const response = await fetch('https://web-production-9f29d.up.railway.app/graphql', {
+      await fetch('https://web-production-9f29d.up.railway.app/graphql', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
