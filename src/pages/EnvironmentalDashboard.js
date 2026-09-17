@@ -3,8 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import {
   LineChart,
   Line,
-  // BarChart,
-  // Bar,
   XAxis,
   YAxis,
   CartesianGrid,
