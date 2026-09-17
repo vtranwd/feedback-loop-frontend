@@ -34,41 +34,41 @@ export default function EnvironmentalDashboard() {
 
   // Fetch all projects
   useEffect(() => {
+    const fetchProjects = async () => {
+      setLoading(true);
+      try {
+        const response = await fetch('https://web-production-9f29d.up.railway.app/graphql', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            query: `query {
+              projects {
+                id
+                name
+                location
+                projectType
+                co2Baseline
+                targetCo2Reduction
+                createdAt
+              }
+            }`,
+          }),
+        });
+        const data = await response.json();
+        setProjects(data.data.projects);
+        if (data.data.projects.length > 0) {
+          setSelectedProject(data.data.projects[0]);
+          fetchProjectData(data.data.projects[0].id);
+        }
+      } catch (error) {
+        console.error('Error fetching projects:', error);
+      }
+      setLoading(false);
+    };
+
     fetchProjects();
     fetchAlerts();
-  }, [fetchProjects]);
-
-  const fetchProjects = async () => {
-    setLoading(true);
-    try {
-      const response = await fetch('https://web-production-9f29d.up.railway.app/graphql', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          query: `query {
-            projects {
-              id
-              name
-              location
-              projectType
-              co2Baseline
-              targetCo2Reduction
-              createdAt
-            }
-          }`,
-        }),
-      });
-      const data = await response.json();
-      setProjects(data.data.projects);
-      if (data.data.projects.length > 0) {
-        setSelectedProject(data.data.projects[0]);
-        fetchProjectData(data.data.projects[0].id);
-      }
-    } catch (error) {
-      console.error('Error fetching projects:', error);
-    }
-    setLoading(false);
-  };
+  }, []);
 
   const fetchProjectData = async (projectId) => {
     try {
