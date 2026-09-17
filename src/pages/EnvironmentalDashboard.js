@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import {
   LineChart,
   Line,
-  BarChart,
-  Bar,
+  // BarChart,
+  // Bar,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -38,7 +38,7 @@ export default function EnvironmentalDashboard() {
   useEffect(() => {
     fetchProjects();
     fetchAlerts();
-  }, []);
+  }, [fetchProjects]);
 
   const fetchProjects = async () => {
     setLoading(true);
