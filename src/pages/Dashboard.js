@@ -72,7 +72,6 @@ export default function Dashboard() {
           }`,
         }),
       });
-      const data = await response.json();
       setFeedbackText('');
       fetchFeedback();
     } catch (error) {
