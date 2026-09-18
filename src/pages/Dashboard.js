@@ -50,7 +50,7 @@ export default function Dashboard() {
     }
     setLoading(false);
   };
-  
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -61,7 +61,7 @@ export default function Dashboard() {
 
     setCreating(true);
     try {
-      await fetch('https://web-production-9f29d.up.railway.app/graphql', {
+      const response = await fetch('https://web-production-9f29d.up.railway.app/graphql', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -74,8 +74,14 @@ export default function Dashboard() {
           }`,
         }),
       });
-      setFeedbackText('');
-      fetchFeedback();
+      const result = await response.json();
+      if (result.data) {
+        setFeedbackText('');
+        fetchFeedback();
+      } else if (result.errors) {
+        console.error('GraphQL Error:', result.errors);
+        alert('Error creating feedback');
+      }
     } catch (error) {
       console.error('Error creating feedback:', error);
     }
