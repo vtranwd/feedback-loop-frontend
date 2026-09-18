@@ -41,14 +41,16 @@ export default function Dashboard() {
           }`,
         }),
       });
-      const data = await response.json();
-      setFeedbackList(data.data.listFeedback.items);
+      const result = await response.json();
+      if (result.data && result.data.listFeedback) {
+        setFeedbackList(result.data.listFeedback.items);
+      }
     } catch (error) {
       console.error('Error fetching feedback:', error);
     }
     setLoading(false);
   };
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
 
